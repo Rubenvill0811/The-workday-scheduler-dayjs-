@@ -4,26 +4,27 @@
 // import dayjs from "dayjs";
 
 
-
-$(document).ready(getTime())
-
-function getTime() {
-
-const weekday = [
-    'Sunday',
-    'Monday',
-    'Tuesday',
-    'Wednesday',
-    'Thursday',
-    'Friday',
-    'Saturday'
-];
-
+const hour = dayjs().format('H');
 const currentDate = dayjs().day();
-const dateFormat = dayjs().format('M/DD/YYYY');
-// const currentHour = date.getHours();
+const formattedDate = dayjs().format('M/DD/YYYY');
 
-const currentDay = weekday[currentDate] + ` ${dateFormat}`;
+
+
+$(document).ready(getDate())
+
+function getDate() {
+    
+    const weekday = [
+        'Sunday',
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday'
+    ];
+
+const currentDay = weekday[currentDate] + ` ${formattedDate}`;
 
 $('#date').text(currentDay)
 
@@ -31,11 +32,102 @@ $('#date').text(currentDay)
     // if sched hour is smaller than current hour -> in the past -> assign color based on value -> == to check if time is current -> check if the time is greater than the current time to get the future value. with the results add a class-style based on the result of the if statement. 
 }
 
+
+function timeVsTask(){
+    console.log(hour)
+    
+    if(hour > '9' ) {
+        $('#9').css('background-color','red' )
+    } else if (hour == '9') {
+        $('#9').css('background-color', 'beige')
+    } else if (hour < '9') {
+        $('#9').css('background-color', 'green')
+    }
+    
+
+    if(hour > '10' ) {
+        $('#10').css('background-color','red' )
+    } else if (hour == '10') {
+        $('#10').css('background-color', 'beige')
+    } else if (hour < '10') {
+        $('#10').css('background-color', 'green')
+    }
+    
+
+    if(hour > '11' ) {
+        $('#11').css('background-color','red' )
+    } else if (hour == '11') {
+        $('#11').css('background-color', 'beige')
+    } else if (hour < '11') {
+        $('#11').css('background-color', 'green')
+    }
+    
+
+    if(hour > '12' ) {
+        $('#12').css('background-color','red' )
+    } else if (hour == '12') {
+        $('#12').css('background-color', 'beige')
+    } else if (hour < '12') {
+        $('#12').css('background-color', 'green')
+    }
+    
+
+    if(hour > '13' ) {
+        $('#13').css('background-color','red' )
+    } else if (hour == '13') {
+        $('#13').css('background-color', 'beige')
+    } else if (hour < '13') {
+        $('#13').css('background-color', 'green')
+    }
+    
+
+    if(hour > '14' ) {
+        $('#14').css('background-color','red' )
+    } else if (hour == '14') {
+        $('#14').css('background-color', 'beige')
+    } else if (hour < '14') {
+        $('#14').css('background-color', 'green')
+    }
+    
+
+    if(hour > '15' ) {
+        $('#15').css('background-color','red' )
+    } else if (hour == '15') {
+        $('#15').css('background-color', 'beige')
+    } else if (hour < '15') {
+        $('#15').css('background-color', 'green')
+    }
+    
+
+    if(hour > '16' ) {
+        $('#16').css('background-color','red' )
+    } else if (hour == '16') {
+        $('#16').css('background-color', 'beige')
+    } else if (hour < '16') {
+        $('#16').css('background-color', 'green')
+    }
+    
+
+    if(hour > '17' ) {
+        $('#17').css('background-color','red' )
+    } else if (hour == '17') {
+        $('#17').css('background-color', 'beige')
+    } else if (hour < '17') {
+        $('#17').css('background-color', 'green')
+    }
+    
+
+}
+
+timeVsTask();
+
 saveTaskToStorage();
 
 
 function saveTaskToStorage() {
     // I need to save what's in the text box to local storage after a task has been described and the save button has been clicked.
+
+
     $('.saveBtn9').click(function() {
         const task9 = $('#hour-9').val();
         localStorage.setItem('9AM', task9)
@@ -53,25 +145,26 @@ function saveTaskToStorage() {
         localStorage.setItem('12PM', task12)
     })
     $('.saveBtn1').click(function() {
-        const task1 = $('#hour-1').val();
+        const task1 = $('#hour-13').val();
         localStorage.setItem('1PM', task1)
     })
     $('.saveBtn2').click(function() {
-        const task2 = $('#hour-2').val();
+        const task2 = $('#hour-14').val();
         localStorage.setItem('2PM', task2)
     })
     $('.saveBtn3').click(function() {
-        const task3 = $('#hour-3').val();
+        const task3 = $('#hour-15').val();
         localStorage.setItem('3PM', task3)
     })
     $('.saveBtn4').click(function() {
-        const task4 = $('#hour-4').val();
+        const task4 = $('#hour-16').val();
         localStorage.setItem('4PM', task4)
     })
     $('.saveBtn5').click(function() {
-        const task5 = $('#hour-5').val();
+        const task5 = $('#hour-17').val();
         localStorage.setItem('5PM', task5)
     })
+    
 };
 
 getTaskFromStorage();
@@ -98,11 +191,11 @@ function getTaskFromStorage() {
         $('#hour-10').text(localStorage.getItem('10AM'))
         $('#hour-11').text(localStorage.getItem('11AM'))
         $('#hour-12').text(localStorage.getItem('12PM'))
-        $('#hour-1').text(localStorage.getItem('1PM'))
-        $('#hour-2').text(localStorage.getItem('2PM'))
-        $('#hour-3').text(localStorage.getItem('3PM'))
-        $('#hour-4').text(localStorage.getItem('4PM'))
-        $('#hour-5').text(localStorage.getItem('5PM'))
+        $('#hour-13').text(localStorage.getItem('1PM'))
+        $('#hour-14').text(localStorage.getItem('2PM'))
+        $('#hour-15').text(localStorage.getItem('3PM'))
+        $('#hour-16').text(localStorage.getItem('4PM'))
+        $('#hour-17').text(localStorage.getItem('5PM'))
 
        
         
