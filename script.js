@@ -35,88 +35,91 @@ $('#date').text(currentDay)
 
 function timeVsTask(){
     console.log(hour)
+
     
-    if(hour > '9' ) {
-        $('#9').css('background-color','red' )
-    } else if (hour == '9') {
-        $('#9').css('background-color', 'beige')
-    } else if (hour < '9') {
-        $('#9').css('background-color', 'green')
+    
+    if(hour < 9 ) {
+        $('#9').css('background-color','#77dd77' )
+    } else if (hour == 9) {
+        $('#9').css('background-color', '#d3d3d3')
+    } else if (hour > 9) {
+        $('#9').css('background-color', '#ff6961')
+    }
+    
+    
+    if(hour < 10 ) {
+        $('#10').css('background-color','#77dd77' )
+    } else if (hour == 10) {
+        $('#10').css('background-color', '#d3d3d3')
+    } else if (hour > 10) {
+        $('#10').css('background-color', '#ff6961')
+    }
+    
+    
+    if(hour < 11 ) {
+        $('#11').css('background-color','#77dd77' )
+    } else if (hour == 11) {
+        $('#11').css('background-color', '#d3d3d3')
+    } else if (hour > 11) {
+        $('#11').css('background-color', '#ff6961')
+    }
+    
+    
+    if(hour < 12 ) {
+        $('#12').css('background-color','#77dd77' )
+    } else if (hour == 12) {
+        $('#12').css('background-color', '#d3d3d3')
+    } else if (hour > 12) {
+        $('#12').css('background-color', '#ff6961')
+    }
+    
+    
+    if(hour < 13 ) {
+        $('#13').css('background-color','#77dd77' )
+    } else if (hour == 13) {
+        $('#13').css('background-color', '#d3d3d3')
+    } else if (hour > 13) {
+        $('#13').css('background-color', '#ff6961')
+    }
+    
+    
+    if(hour < 14 ) {
+        $('#14').css('background-color','#77dd77' )
+    } else if (hour == 14) {
+        $('#14').css('background-color', '#d3d3d3')
+    } else if (hour > 14) {
+        $('#14').css('background-color', '#ff6961')
+    }
+    
+    
+    if(hour < 15 ) {
+        $('#15').css('background-color','#77dd77' )
+    } else if (hour == 15) {
+        $('#15').css('background-color', '#d3d3d3')
+    } else if (hour > 15) {
+        $('#15').css('background-color', '#ff6961')
+    }
+    
+    
+    if(hour < 16 ) {
+        $('#16').css('background-color','#77dd77' )
+    } else if (hour == 16) {
+        $('#16').css('background-color', '#d3d3d3')
+    } else if (hour > 16) {
+        $('#16').css('background-color', '#ff6961')
+    }
+    
+    
+    if(hour < 17 ) {
+        $('#17').css('background-color','#77dd77' )
+    } else if (hour == 17) {
+        $('#17').css('background-color', '#d3d3d3')
+    } else if (hour > 17) {
+        $('#17').css('background-color', '#ff6961')
     }
     
 
-    if(hour > '10' ) {
-        $('#10').css('background-color','red' )
-    } else if (hour == '10') {
-        $('#10').css('background-color', 'beige')
-    } else if (hour < '10') {
-        $('#10').css('background-color', 'green')
-    }
     
-
-    if(hour > '11' ) {
-        $('#11').css('background-color','red' )
-    } else if (hour == '11') {
-        $('#11').css('background-color', 'beige')
-    } else if (hour < '11') {
-        $('#11').css('background-color', 'green')
-    }
-    
-
-    if(hour > '12' ) {
-        $('#12').css('background-color','red' )
-    } else if (hour == '12') {
-        $('#12').css('background-color', 'beige')
-    } else if (hour < '12') {
-        $('#12').css('background-color', 'green')
-    }
-    
-
-    if(hour > '13' ) {
-        $('#13').css('background-color','red' )
-    } else if (hour == '13') {
-        $('#13').css('background-color', 'beige')
-    } else if (hour < '13') {
-        $('#13').css('background-color', 'green')
-    }
-    
-
-    if(hour > '14' ) {
-        $('#14').css('background-color','red' )
-    } else if (hour == '14') {
-        $('#14').css('background-color', 'beige')
-    } else if (hour < '14') {
-        $('#14').css('background-color', 'green')
-    }
-    
-
-    if(hour > '15' ) {
-        $('#15').css('background-color','red' )
-    } else if (hour == '15') {
-        $('#15').css('background-color', 'beige')
-    } else if (hour < '15') {
-        $('#15').css('background-color', 'green')
-    }
-    
-
-    if(hour > '16' ) {
-        $('#16').css('background-color','red' )
-    } else if (hour == '16') {
-        $('#16').css('background-color', 'beige')
-    } else if (hour < '16') {
-        $('#16').css('background-color', 'green')
-    }
-    
-
-    if(hour > '17' ) {
-        $('#17').css('background-color','red' )
-    } else if (hour == '17') {
-        $('#17').css('background-color', 'beige')
-    } else if (hour < '17') {
-        $('#17').css('background-color', 'green')
-    }
-    
-
 }
 
 timeVsTask();
